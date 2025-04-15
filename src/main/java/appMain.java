@@ -1,8 +1,14 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class appMain {
     public static void main(String[] args) {
         // Menu Principal
+
+        HashMap<String,Teacher> teachers = new HashMap<>();
+        HashMap<String,Course> courses = new HashMap<>();
+        HashMap<String,Student> students = new HashMap<>();
+
         Scanner scanner = new Scanner(System.in);
         String[] optionSuperMenu={"Program Start","Submenu","Comands"};
         String[] optionsMenu={"Nombre de la Escuela","numero de Profesores",
