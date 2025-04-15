@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class Course {
@@ -7,6 +8,7 @@ public class Course {
     private Double price;
     private Teacher teacher;
     private int money_earned;
+    private ArrayList<Student> students;
 
     public Course(String name, Double price) {
         setCourseId();
@@ -14,6 +16,7 @@ public class Course {
         setPrice(price);
         setTeacher(null);
         setMoneyEarned(0);
+        setStudents(new ArrayList<Student>());
     }
 
     public String getCourseId() {
@@ -53,4 +56,12 @@ public class Course {
     public int getMoneyEarned() {return money_earned;}
 
     public void setMoneyEarned(int money_earned) {this.money_earned = money_earned;}
+
+    public ArrayList<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(ArrayList<Student> students) {
+        this.students = students;
+    }
 }
