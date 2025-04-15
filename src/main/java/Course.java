@@ -6,12 +6,14 @@ public class Course {
     private String name;
     private Double price;
     private Teacher teacher;
+    private int money_earned;
 
     public Course(String name, Double price) {
         setCourseId();
         setName(name);
         setPrice(price);
         setTeacher(null);
+        setMoneyEarned(0);
     }
 
     public String getCourseId() {
@@ -46,4 +48,9 @@ public class Course {
         this.teacher = teacher;
     }
 
+    public void setCourseId(String courseId) {this.courseId = courseId;}
+
+    public int getMoneyEarned() {return money_earned;}
+
+    public void setMoneyEarned(int money_earned) {this.money_earned = money_earned;}
 }
