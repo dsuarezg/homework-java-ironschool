@@ -64,4 +64,10 @@ public class Course {
     public void setStudents(ArrayList<Student> students) {
         this.students = students;
     }
+
+    public void enrollStudent(Student student) {
+        this.students.add(student);
+        student.setCourse(this);
+        this.money_earned += this.price;
+    }
 }
