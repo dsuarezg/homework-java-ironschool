@@ -38,7 +38,7 @@ public class SchoolHandler {
 
     }
 
-    private static Student createStudent() {
+    public static Student createStudent() {
         System.out.println("Name of the Student");
         String name=scanner.nextLine();
         System.out.println("Address of the Student");
