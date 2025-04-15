@@ -7,7 +7,7 @@ public class Course {
     private String name;
     private Double price;
     private Teacher teacher;
-    private int money_earned;
+    private Double money_earned;
     private ArrayList<Student> students;
 
     public Course(String name, Double price) {
@@ -15,7 +15,7 @@ public class Course {
         setName(name);
         setPrice(price);
         setTeacher(null);
-        setMoneyEarned(0);
+        setMoneyEarned(0.0);
         setStudents(new ArrayList<Student>());
     }
 
@@ -53,9 +53,9 @@ public class Course {
 
     public void setCourseId(String courseId) {this.courseId = courseId;}
 
-    public int getMoneyEarned() {return money_earned;}
+    public Double getMoneyEarned() {return money_earned;}
 
-    public void setMoneyEarned(int money_earned) {this.money_earned = money_earned;}
+    public void setMoneyEarned(Double money_earned) {this.money_earned = money_earned;}
 
     public ArrayList<Student> getStudents() {
         return students;
