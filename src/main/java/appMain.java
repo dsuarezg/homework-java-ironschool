@@ -52,13 +52,13 @@ public class appMain {
                             // entry teacher
                             case 1:
                                 SchoolHandler.createTeacher();
-
+                                continue;
                             case 2:
                                 SchoolHandler.createCourse();
-
+                                continue;
                             case 3:
                                 SchoolHandler.createStudent();
-
+                                continue;
                             case 4:
                                 handlerSubMenu = false;
                                 continue;
