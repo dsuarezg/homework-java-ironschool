@@ -18,7 +18,7 @@ public class Teacher {
     }
 
     public void setTeacherId() {
-        this.teacherId = UUID.randomUUID().toString();;
+        this.teacherId = UUID.randomUUID().toString().substring(0, 4);;
     }
 
     public String getName() {
