@@ -21,7 +21,7 @@ public class Student {
     }
 
     public void setStudentId() {
-        this.studentId = UUID.randomUUID().toString();
+        this.studentId = UUID.randomUUID().toString().substring(0, 4);
     }
 
     public String getName() {

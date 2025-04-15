@@ -24,7 +24,7 @@ public class Course {
     }
 
     public void setCourseId() {
-        this.courseId = UUID.randomUUID().toString();
+        this.courseId = UUID.randomUUID().toString().substring(0, 4);
     }
 
     public String getName() {
