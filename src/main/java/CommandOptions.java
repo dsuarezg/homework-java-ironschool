@@ -3,7 +3,9 @@ public enum CommandOptions {
     COURSES("COURSE"),
     STUDENTS("STUDENT"),
     TEACHERS("TEACHER"),
-    PROFIT("PROFIT");
+    PROFIT("PROFIT"),
+    MONEY_EARNED("MONEY EARNED"),
+    MONEY_SPENT("MONEY SPENT"),;
 
     private final String singular;
 

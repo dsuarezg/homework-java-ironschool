@@ -1,7 +1,5 @@
-import java.util.HashMap;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import java.util.*;
+
 public class SchoolHandler {
     static Scanner scanner = new Scanner(System.in);
     static String schoolName;
@@ -33,10 +31,10 @@ public class SchoolHandler {
             Student student=createStudent();
             students.put(student.getStudentId(),student);
         }
-
-
-
     }
+
+    // CREO QUE PODRÍAMOS METER AL OBJETO EN EL MAP DESDE CREATE Y NO DESDE EL FOR COMO ARRIBA
+    // DE CARA A LOS TESTS ME PARECE MÁS SENCILLO
 
     public static Student createStudent() {
         System.out.println("Name of the Student");
@@ -97,7 +95,7 @@ public class SchoolHandler {
         }
     }
 
-    public void lookupCourse(String courseID) throws NoSuchElementException{
+    public static void lookupCourse(String courseID) throws NoSuchElementException{
         if (courses.containsKey(courseID)){
             Course course=courses.get(courseID);
             System.out.println("Course ID: "+course.getCourseId());
@@ -114,7 +112,7 @@ public class SchoolHandler {
 
     }
 
-    public void showAllStudents(){
+    public static void showAllStudents(){
         System.out.println("Students");
         for (String studentId : students.keySet()) {
             Student student = students.get(studentId);
@@ -122,7 +120,7 @@ public class SchoolHandler {
         }
     }
 
-    public void lookupStudent(String studentID) throws NoSuchElementException{
+    public static void lookupStudent(String studentID) throws NoSuchElementException{
         if (students.containsKey(studentID)){
             Student student=students.get(studentID);
             System.out.println("Student ID: "+student.getStudentId());
@@ -137,7 +135,7 @@ public class SchoolHandler {
 
     }
 
-    public void showAllTeachers(){
+    public static void showAllTeachers(){
         System.out.println("Teachers");
         for (String teacherId : teachers.keySet()) {
             Teacher teacher = teachers.get(teacherId);
@@ -145,7 +143,7 @@ public class SchoolHandler {
         }
     }
 
-    public void lookupTeacher(String teacherID) throws NoSuchElementException{
+    public static void lookupTeacher(String teacherID) throws NoSuchElementException{
         if (teachers.containsKey(teacherID)){
             Teacher teacher=teachers.get(teacherID);
             System.out.println("Teacher ID: "+teacher.getTeacherId());
@@ -157,7 +155,7 @@ public class SchoolHandler {
 
     }
 
-    public void showProfits(){
+    public static void showProfits(){
 
         int totalEarned=0;
         int totalSalaries=0;
@@ -174,7 +172,7 @@ public class SchoolHandler {
         System.out.println("Profits : " + (totalEarned - totalSalaries));
     }
 
-    public void showStudentsFromCourse(String courseID) throws NoSuchElementException{
+    public static void showStudentsFromCourse(String courseID) throws NoSuchElementException{
         if (courses.containsKey(courseID)){
             Course course=courses.get(courseID);
             System.out.println("Students from course: "+course.getName());
@@ -187,7 +185,7 @@ public class SchoolHandler {
 
     }
 
-    public void showTotalMoneyEarned(){
+    public static void showTotalMoneyEarned(){
         int totalEarned=0;
         for (String courseId : courses.keySet()) {
             Course course = courses.get(courseId);
@@ -196,7 +194,7 @@ public class SchoolHandler {
         System.out.println("Total Money Earned: " + totalEarned);
     }
 
-    public void showTotalSalariesPaid(){
+    public static void showTotalSalariesPaid(){
         int totalSalaries=0;
         for (String teacherId : teachers.keySet()) {
             Teacher teacher = teachers.get(teacherId);
@@ -204,4 +202,5 @@ public class SchoolHandler {
         }
         System.out.println("Total Salaries Paid: " + totalSalaries);
     }
+
 }

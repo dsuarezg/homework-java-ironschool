@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -24,7 +25,7 @@ public class Course {
     }
 
     public void setCourseId() {
-        this.courseId = UUID.randomUUID().toString().substring(0, 4);
+        this.courseId = UUID.randomUUID().toString();
     }
 
     public String getName() {

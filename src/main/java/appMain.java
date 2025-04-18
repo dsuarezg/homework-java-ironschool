@@ -7,7 +7,7 @@ public class appMain {
 
         Scanner scanner = new Scanner(System.in);
         String[] optionSuperMenu = {"Create new School ",
-                "Create manually Data (Teacher, Students etc..)", "Comand",
+                "Create manually Data (Teacher, Students etc..)", "Comand","Load Data","Save Data",
                 "Exit"};
         String[] optionsMenu = {"Entry a new Teacher",
                 "Entry a Course", "Entry a Student", "salir"};
@@ -67,11 +67,21 @@ public class appMain {
 
                         }
                     }
+                    case 3:
+                        AppHandler.commandHandler();
+                        break;
 
-                case 3:
+                case 4:
                     //return boolean
                     //createCourses();
-                case 4:
+                    FileHandler.loadData();
+                    System.out.println("Data loaded");
+                    break;
+                case 5:
+                    FileHandler.saveData();
+                    System.out.println("Data saved");
+                    break;
+                case 6:
                     handlerSuperMenu = false;
                     break;
             }
