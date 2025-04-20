@@ -6,7 +6,6 @@ public class Teacher {
     private String name;
     private Double salary;
 
-
     public Teacher(String name, Double salary) {
         setTeacherId();
         setName(name);
@@ -18,7 +17,7 @@ public class Teacher {
     }
 
     public void setTeacherId() {
-        this.teacherId = UUID.randomUUID().toString();;
+        this.teacherId = UUID.randomUUID().toString().substring(0, 4);
     }
 
     public String getName() {
@@ -35,6 +34,15 @@ public class Teacher {
 
     public void setSalary(Double salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "\n\tteacherId='" + teacherId + '\'' +
+                ",\n\tname='" + name + '\'' +
+                ",\n\tsalary=" + salary +
+                "\n}";
     }
 
 }

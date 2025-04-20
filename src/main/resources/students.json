@@ -1,0 +1,62 @@
+[
+  {
+    "studentId": "f345",
+    "name": "Isabel",
+    "address": "Granada",
+    "email": "isabel@example.com"
+  },
+  {
+    "studentId": "e012",
+    "name": "Miguel",
+    "address": "Bilbao",
+    "email": "miguel@example.com"
+  },
+  {
+    "studentId": "h901",
+    "name": "Pedro",
+    "address": "Malaga",
+    "email": "pedro@example.com"
+  },
+  {
+    "studentId": "k890",
+    "name": "Marina",
+    "address": "Santander",
+    "email": "marina@example.com"
+  },
+  {
+    "studentId": "d789",
+    "name": "Sofia",
+    "address": "Valencia",
+    "email": "sofia@example.com"
+  },
+  {
+    "studentId": "i234",
+    "name": "Laura",
+    "address": "Alicante",
+    "email": "laura@example.com"
+  },
+  {
+    "studentId": "j567",
+    "name": "Hector",
+    "address": "Valladolid",
+    "email": "hector@example.com"
+  },
+  {
+    "studentId": "b123",
+    "name": "Ana",
+    "address": "Madrid",
+    "email": "ana@example.com"
+  },
+  {
+    "studentId": "c456",
+    "name": "Carlos",
+    "address": "Sevilla",
+    "email": "carlos@example.com"
+  },
+  {
+    "studentId": "g678",
+    "name": "Luis",
+    "address": "Zaragoza",
+    "email": "luis@example.com"
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "courseId": "i9j0",
+    "name": "Ruby",
+    "price": 4200.0,
+    "moneyEarned": 0.0,
+    "students": []
+  },
+  {
+    "courseId": "a1b2",
+    "name": "Java",
+    "price": 5000.0,
+    "teacher": {
+      "teacherId": "35a6",
+      "name": "Marcel",
+      "salary": 5200.0
+    },
+    "moneyEarned": 10000.0,
+    "students": [
+      {
+        "studentId": "b123",
+        "name": "Ana",
+        "address": "Madrid",
+        "email": "ana@example.com"
+      },
+      {
+        "studentId": "c456",
+        "name": "Carlos",
+        "address": "Sevilla",
+        "email": "carlos@example.com"
+      }
+    ]
+  },
+  {
+    "courseId": "c3d4",
+    "name": "Python",
+    "price": 4500.0,
+    "moneyEarned": 0.0,
+    "students": []
+  },
+  {
+    "courseId": "e5f6",
+    "name": "JavaScript",
+    "price": 4000.0,
+    "moneyEarned": 0.0,
+    "students": []
+  },
+  {
+    "courseId": "g7h8",
+    "name": "C++",
+    "price": 4800.0,
+    "moneyEarned": 0.0,
+    "students": []
+  }
+]
