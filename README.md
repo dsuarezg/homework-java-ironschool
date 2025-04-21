@@ -1,108 +1,159 @@
-![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
+# IronSchool
 
-# HW | Java IronSchool (Unit 2 homework)
+## Introducción
 
-## Introduction
+Este proyecto consiste en construir un sistema de gestión escolar llamado **IronSchool**, que permite administrar estudiantes, profesores y cursos con funcionalidades básicas.
 
-For this homework, you will be building a School Management System, that will help manage students, teachers and courses with some basic functionalities.
+## Requisitos previos
 
-## Instructions
+- **Java 21.**
+- **Maven y dependencias.**
 
-Let's walk through the details of the homework:
+## Instrucciones de uso
 
-### Classes
+1. **Clonar el repositorio**:
+   Clona este repositorio en tu máquina local utilizando el siguiente comando:
+   ```bash
+   git clone https://github.com/dsuarezg/java-ironbattle
+   ```
 
-Three main classes are necessary to complete this homework: **Teacher**, **Student** and **Course**.
+2. **Compilar el proyecto**:
+   Asegúrate de tener **Maven** instalado. Para compilar el proyecto, ejecuta:
+   ```bash
+   mvn clean install
+   ```
 
-<br>
+3. **Ejecutar la aplicación**:
+   Para iniciar la aplicación, utiliza el siguiente comando:
+   ```bash
+   mvn exec:java -Dexec.mainClass="appMain"
+   ```
 
-**Teacher class**
+4. **Pruebas unitarias**:
+   Ejecuta las pruebas unitarias con:
+   ```bash
+   mvn test
+   ```
 
-This class will have:
+### Flujo de la aplicación
 
-- Variable called `teacherId` of data type `string`, auto-generated (Private member)
-- Variable called `name` of data type `string` (Private member)
-- Variable called `salary` of data type `double`, representing the salary of the teacher (Private member)
-- A parameterized constructor that takes `name` and `salary`
-- Public Getter functions to access these variables
-- Public Setter functions to change these variables
-- Optional attributes are accepted if needed based on the code structure
+1. Al iniciar, el sistema mostrará el menú principal.
+2. Selecciona una opción ingresando el número correspondiente.
+3. Sigue las instrucciones en pantalla para ingresar datos o ejecutar comandos.
 
-<br>
 
-**Course class**
+## Menús de la aplicación
 
-This class will have:
+### Menú principal
 
-- Variable called `courseId` of data type `string`, auto-generated (Private member)
-- Variable called `name` of data type `string` (Private member)
-- Variable called `price` of data type `double`, representing the price of this course (Private member)
-- Variable called `money_earned` of data type `double`, representing the total money earned by this course (Private member)
-- Nullable variable called `teacher` of data type `Teacher` (Private member)
-- A parameterized constructor that takes `name` and `price`
-- Public Getter functions to access these variables
-- Public Setter functions to change these variables
-- Optional attributes are accepted if needed based on the code structure
+Al iniciar la aplicación, se mostrará el siguiente menú principal:
 
-<br>
+```text
+======== 🏫 Iron School ========
+1. 🎓 Initialize School
+2. 📚 Create individual entities
+3. 🖥️ Use accepted commands
+4. 📂 Load data from file
+5. 💾 Save data to file
+---------------------------------
+6. ❌ Exit
+=================================
+Choose an option:
+```
 
-**Student class**
+### Submenú
 
-This class will have:
+Si seleccionas la opción **2. Create individual entities**, se mostrará el siguiente submenú:
 
-- Variable called `studentId` of data type `string`, auto-generated (Private member)
-- Variable called `name` of data type `string` (Private member)
-- Variable called `address` of data type `string` (Private member)
-- Variable called `email` of data type `string` (Private member)
-- Nullable variable called `course` of data type `Course`, representing the course this student is enrolled into (Private member)
-- A parameterized constructor that takes `name`, `address` and `email`
-- Public Getter functions to access these variables
-- Public Setter functions to change these variables
-- Optional attributes are accepted if needed based on the code structure
+```text
+======== 🏫 Iron School ========
+1. 🧑‍🎓 Add new Student
+2. 👩‍🏫 Add new Teacher
+3. 📘 Add new Course
+---------------------------------
+4. 🔙 Return to main menu
+=================================
+Choose an option:
+```
 
-## How the application works
+### Mensajes de interacción
 
-1. The application starts by asking the user for a name for the school
-2. Next, the user is asked for a number of how many teachers should be created
-3. Next, the user is prompted to enter the details of each teacher (based on the number chosen above)
-4. Next, the user is asked for the number of courses to be created (Do not specify the teacher yet, there is a command for it)
-5. Next, the user is prompted to enter details of each course based on the number chosen above
-6. Next, the user is asked for the number of students to be created (Do not specify the course yet, there is a command for it)
-7. Next, the user is prompted to enter details of each student based on the number chosen above
-8. Next, the user is now prompted to enter any command of the list below to execute a specified action in the system.
+Durante la ejecución, la aplicación mostrará mensajes como:
 
-The IDs should be automatically generated.
+- `How many courses do you want to add?`
+- `How many students do you want to add?`
+- `Press Enter to continue...`
+- `Invalid option. Please try again.`
+- `Incorrect argument: [error message]`
+- `Element not found: [error message]`
+- `An unexpected error occurred: [error message]`
 
-## Commands
+## Ejemplos de uso
 
-- **ENROLL** **[STUDENT_ID] [COURSE_ID]**: This command will help enroll the student specified in the corresponding course. While also updating the `money_earned` of that course based on its price
-- **ASSIGN** **[TEACHER_ID] [COURSE_ID]**: This command will help assign the teacher specified to the corresponding course
-- **SHOW COURSES**: This command will display a list of all courses
-- **LOOKUP COURSE** **[COURSE_ID]**: This command will display the full details of the specified course
-- **SHOW STUDENTS**: This command will display a list of all students
-- **LOOKUP STUDENT** **[STUDENT_ID]**: This command will display the full details of the specified student
-- **SHOW TEACHERS**: This command will display a list of all teachers
-- **LOOKUP TEACHER** **[TEACHER_ID]**: This command will display the full details of the specified teacher
-- **SHOW PROFIT**: This command will calculate **(The total money earned from all courses)** - **(The sum of all the teachers' salaries)** and return the result
+### Comandos disponibles
 
-## Requirements
+- **ENROLL [STUDENT_ID] [COURSE_ID]**: Inscribir un estudiante en un curso.
+  **Ejemplo**:
+  ```text
+  ENROLL b123 a1b2
+  ```
+  Esto inscribirá al estudiante con ID `b123` en el curso con ID `a1b2`.
 
-For this project you must accomplish all of the following:
+- **ASSIGN [TEACHER_ID] [COURSE_ID]**: Asignar un profesor a un curso.
+  **Ejemplo**:
+  ```text
+  ASSIGN 35a6 a1b2
+  ```
+  Esto asignará al profesor con ID `35a6` al curso con ID `a1b2`.
 
-1.  Navigate through a text-based menu using Standard Input and Output.
-2.  Create unit tests for every method other than basic getters, setters and constructors (getters and setters with logic do require unit tests).
-3.  Handle all exceptions gracefully (incorrect input should not crash the program).
-4.  Create Teachers, Courses and Students specifying their full details.
-5.  Handle receiving commands in the Standard Input that corresponds to actual actions in the system.
+- **SHOW COURSES**: Mostrar todos los cursos disponibles.
+  **Ejemplo**:
+  ```text
+  SHOW COURSES
+  ```
 
-### Bonus
+- **LOOKUP COURSE [COURSE_ID]**: Mostrar detalles de un curso específico.
+  **Ejemplo**:
+  ```text
+  LOOKUP COURSE a1b2
+  ```
 
-1. Add more commands that can help display more information such as (**SHOW STUDENTS** **[COURSE_ID]**, **SHOW MONEY EARNED**, **SHOW MONEY SPENT**, etc.)
+- **SHOW STUDENTS**: Mostrar todos los estudiantes registrados.
+  **Ejemplo**:
+  ```text
+  SHOW STUDENTS
+  ```
 
-## Important Notes
+- **LOOKUP STUDENT [STUDENT_ID]**: Mostrar detalles de un estudiante específico.
+  **Ejemplo**:
+  ```text
+  LOOKUP STUDENT b123
+  ```
 
-- Everyone in the squad should contribute equally to the project in time and lines of code written.
-- All code must be reviewed before it is merged into the `master` branch.
-- All squad members must participate in code review.
-- Every repository should have a README file with clear instructions, demo files, or any documentation needed so other teams don't have problems with the review.
-- This is intended to be a challenging assignment. You will have to rely heavily on your teammates and independent research. Learning independently is a hallmark of a good developer and our job is to turn you into good developers. This process may be frustrating but you will learn a ton!
+- **SHOW TEACHERS**: Mostrar todos los profesores registrados.
+  **Ejemplo**:
+  ```text
+  SHOW TEACHERS
+  ```
+
+- **LOOKUP TEACHER [TEACHER_ID]**: Mostrar detalles de un profesor específico.
+  **Ejemplo**:
+  ```text
+  LOOKUP TEACHER 35a6
+  ```
+
+- **SHOW PROFIT**: Calcular las ganancias totales de la escuela.
+  **Ejemplo**:
+  ```text
+  SHOW PROFIT
+  ```
+
+## Notas importantes
+
+- Todos los IDs (de estudiantes, profesores y cursos) son generados automáticamente.
+- Los datos de ejemplo se encuentran en los archivos `src/main/resources/*.json`.
+
+
+## Contacto
+
+Para cualquier duda o problema, por favor contacta al equipo de desarrollo.
