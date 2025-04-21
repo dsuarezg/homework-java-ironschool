@@ -36,88 +36,88 @@ class SchoolHandlerTest {
         assertEquals(1, teachers.size());
         assertTrue(teachers.values().stream().anyMatch(t -> t.getName().equals("John Doe")));
     }
-//
-//    @Test
-//    @DisplayName("Test createTeacher with empty name")
-//    void createTeacher_emptyName() {
-//        String input = "\n50000\n";
-//        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
-//
-//        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createTeacher(teachers, scanner));
-//    }
-//
-//    @Test
-//    @DisplayName("Test createStudent with valid input")
-//    void createStudent_validInput() {
-//        String input = "Alice Johnson\n123 Main St\nalice@example.com\n";
-//        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
-//
-//        SchoolHandler.createStudent(students, scanner);
-//
-//        students.values().stream()
-//                .filter(student -> student.getName().equals("Alice Johnson"))
-//                .forEach(System.out::println);
-//
-//        assertEquals(1, students.size());
-//        assertTrue(students.values().stream().anyMatch(s -> s.getEmail().equals("alice@example.com")));
-//    }
 
-//    @Test
-//    @DisplayName("Test createStudent with empty email")
-//    void createStudent_emptyEmail() {
-//        String input = "Alice Johnson\n123 Main St\n\n";
-//        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
-//
-//        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createStudent(students, scanner));
-//    }
-//
-//    @Test
-//    @DisplayName("Test createCourse with valid input")
-//    void createCourse_validInput() {
-//        String input = "Mathematics\n200\n";
-//        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
-//
-//        SchoolHandler.createCourse(courses, scanner);
-//
-//        assertEquals(1, courses.size());
-//        assertTrue(courses.values().stream().anyMatch(c -> c.getName().equals("Mathematics")));
-//    }
-//
-//    @Test
-//    @DisplayName("Test createCourse with invalid price")
-//    void createCourse_invalidPrice() {
-//        String input = "Mathematics\ninvalid_price\n";
-//        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
-//
-//        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createCourse(courses, scanner));
-//    }
-//
-//    @Test
-//    @DisplayName("Test createTeacher with invalid salary")
-//    void createTeacher_invalidSalary() {
-//        String input = "John Doe\ninvalid_salary\n";
-//        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
-//
-//        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createTeacher(teachers, scanner));
-//    }
-//
-//    @Test
-//    @DisplayName("Test createStudent with empty address")
-//    void createStudent_emptyAddress() {
-//        String input = "Alice Johnson\n\nalice@example.com\n";
-//        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
-//
-//        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createStudent(students, scanner));
-//    }
-//
-//    @Test
-//    @DisplayName("Test createCourse with empty name")
-//    void createCourse_emptyName() {
-//        String input = "\n200\n";
-//        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
-//
-//        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createCourse(courses, scanner));
-//    }
+    @Test
+    @DisplayName("Test createTeacher with empty name")
+    void createTeacher_emptyName() {
+        String input = "\n50000\n";
+        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
+
+        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createTeacher(teachers, scanner));
+    }
+
+    @Test
+    @DisplayName("Test createStudent with valid input")
+    void createStudent_validInput() {
+        String input = "Alice Johnson\n123 Main St\nalice@example.com\n";
+        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
+
+        SchoolHandler.createStudent(students, scanner);
+
+        students.values().stream()
+                .filter(student -> student.getName().equals("Alice Johnson"))
+                .forEach(System.out::println);
+
+        assertEquals(1, students.size());
+        assertTrue(students.values().stream().anyMatch(s -> s.getEmail().equals("alice@example.com")));
+    }
+
+    @Test
+    @DisplayName("Test createStudent with empty email")
+    void createStudent_emptyEmail() {
+        String input = "Alice Johnson\n123 Main St\n\n";
+        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
+
+        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createStudent(students, scanner));
+    }
+
+    @Test
+    @DisplayName("Test createCourse with valid input")
+    void createCourse_validInput() {
+        String input = "Mathematics\n200\n";
+        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
+
+        SchoolHandler.createCourse(courses, scanner);
+
+        assertEquals(1, courses.size());
+        assertTrue(courses.values().stream().anyMatch(c -> c.getName().equals("Mathematics")));
+    }
+
+    @Test
+    @DisplayName("Test createCourse with invalid price")
+    void createCourse_invalidPrice() {
+        String input = "Mathematics\ninvalid_price\n";
+        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
+
+        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createCourse(courses, scanner));
+    }
+
+    @Test
+    @DisplayName("Test createTeacher with invalid salary")
+    void createTeacher_invalidSalary() {
+        String input = "John Doe\ninvalid_salary\n";
+        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
+
+        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createTeacher(teachers, scanner));
+    }
+
+    @Test
+    @DisplayName("Test createStudent with empty address")
+    void createStudent_emptyAddress() {
+        String input = "Alice Johnson\n\nalice@example.com\n";
+        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
+
+        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createStudent(students, scanner));
+    }
+
+    @Test
+    @DisplayName("Test createCourse with empty name")
+    void createCourse_emptyName() {
+        String input = "\n200\n";
+        Scanner scanner = new Scanner(new ByteArrayInputStream(input.getBytes()));
+
+        assertThrows(IllegalArgumentException.class, () -> SchoolHandler.createCourse(courses, scanner));
+    }
 
     @Test
     @DisplayName("Test lookupTeacher with valid ID")
