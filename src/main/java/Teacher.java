@@ -37,4 +37,12 @@ public class Teacher {
         this.salary = salary;
     }
 
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "teacherId='" + teacherId + '\'' +
+                ", name='" + name + '\'' +
+                ", salary=" + salary +
+                '}';
+    }
 }

@@ -17,12 +17,12 @@ public enum CommandOptions {
         return singular;
     }
 
-/*    public static CommandOptions fromString(String value) {
+   public static CommandOptions fromString(String value) {
         for (CommandOptions type : CommandOptions.values()) {
             if (type.name().equalsIgnoreCase(value) || type.singular.equalsIgnoreCase(value)) {
                 return type;
             }
         }
         throw new IllegalArgumentException("Invalid value: " + value);
-    }*/
+    }
 }
