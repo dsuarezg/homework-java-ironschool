@@ -14,7 +14,7 @@ Este proyecto consiste en construir un sistema de gestión escolar llamado **Iro
 1. **Clonar el repositorio**:
    Clona este repositorio en tu máquina local utilizando el siguiente comando:
    ```bash
-   git clone https://github.com/dsuarezg/java-ironbattle
+   git clone https://github.com/dsuarezg/homework-java-ironschool
    ```
 
 2. **Compilar el proyecto**:
