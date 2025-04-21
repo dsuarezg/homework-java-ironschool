@@ -6,9 +6,9 @@ public class Course {
 
     private String courseId;
     private String name;
-    private Double price;
+    private double price;
     private Teacher teacher;
-    private Double money_earned;
+    private double money_earned;
     private ArrayList<Student> students;
 
     public Course(String name, Double price) {
@@ -16,7 +16,8 @@ public class Course {
         setName(name);
         setPrice(price);
         setTeacher(null);
-        setMoneyEarned(0.0);
+        //setMoneyEarned(0.0);
+        this.money_earned = 0.0;
         setStudents(new ArrayList<Student>());
     }
 
@@ -70,5 +71,17 @@ public class Course {
         this.students.add(student);
         student.setCourse(this);
         this.money_earned += this.price;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "courseId='" + courseId + '\'' +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", teacher=" + teacher +
+                ", money_earned=" + money_earned +
+                ", students=" + students +
+                '}';
     }
 }

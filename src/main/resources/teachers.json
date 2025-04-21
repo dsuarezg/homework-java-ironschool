@@ -1,1 +1,52 @@
-[{"teacherId":"e26b","name":"Hector","salary":5000.0},{"teacherId":"35a6","name":"Marcel","salary":5000.0}]
+[
+  {
+    "teacherId": "i9j0",
+    "name": "Sofia",
+    "salary": 4900.0
+  },
+  {
+    "teacherId": "e26b",
+    "name": "Hector",
+    "salary": 5200.0
+  },
+  {
+    "teacherId": "a1b2",
+    "name": "Laura",
+    "salary": 5000.0
+  },
+  {
+    "teacherId": "c3d4",
+    "name": "Carlos",
+    "salary": 5300.0
+  },
+  {
+    "teacherId": "k1l2",
+    "name": "Miguel",
+    "salary": 5400.0
+  },
+  {
+    "teacherId": "e5f6",
+    "name": "Ana",
+    "salary": 4700.0
+  },
+  {
+    "teacherId": "m3n4",
+    "name": "Isabel",
+    "salary": 4600.0
+  },
+  {
+    "teacherId": "35a6",
+    "name": "Marcel",
+    "salary": 5200.0
+  },
+  {
+    "teacherId": "g7h8",
+    "name": "Luis",
+    "salary": 5100.0
+  },
+  {
+    "teacherId": "o5p6",
+    "name": "Pedro",
+    "salary": 5000.0
+  }
+]
